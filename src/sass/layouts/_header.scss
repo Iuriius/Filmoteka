@@ -1,0 +1,316 @@
+.header {
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
+
+  background-image: linear-gradient(to right, $color-overlay-header, $color-overlay-header), url(../images/header/background-mob-320@1x.jpg);
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, $color-overlay-header, $color-overlay-header), url(../images/header/background-mob-640@2x.jpg);
+  }
+
+  @media screen and (min-width: $tablet) {
+    background-image: linear-gradient(to right, $color-overlay-header, $color-overlay-header), url(../images/header/background-tab-768@1x.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, $color-overlay-header, $color-overlay-header), url(../images/header/background-tab-1536@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    background-image: linear-gradient(to right, $color-overlay-header, $color-overlay-header), url(../images/header/background-desk-1280@1x.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, $color-overlay-header, $color-overlay-header), url(../images/header/background-desk-2560@2x.jpg);
+    }
+  }
+
+  &.library {
+    background-image: linear-gradient(to right, $color-overlay-header, $color-overlay-header), url(../images/header/background2-mob-320@1x.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, $color-overlay-header, $color-overlay-header), url(../images/header/background2-mob-640@2x.jpg);
+    }
+
+    @media screen and (min-width: $tablet) {
+      background-image: linear-gradient(to right, $color-overlay-header, $color-overlay-header), url(../images/header/background2-tab-768@1x.jpg);
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right, $color-overlay-header, $color-overlay-header), url(../images/header/background2-tab-1536@2x.jpg);
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      background-image: linear-gradient(to right, $color-overlay-header, $color-overlay-header), url(../images/header/background2-desk-1280@1x.jpg);
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right, $color-overlay-header, $color-overlay-header), url(../images/header/background2-desk-2560@2x.jpg);
+      }
+    }
+  }
+}
+
+.header__container {
+  padding-top: 30px;
+  padding-bottom: 92px;
+
+  @media screen and (min-width: ($tablet)) {
+    padding-bottom: 81px;
+  }
+
+  &.library {
+    padding-bottom: 62px;
+
+    @media screen and (min-width: ($tablet)) {
+      padding-bottom: 57px;
+    }
+  }
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.header__logo-icon {
+  @media screen and (min-width: ($tablet)) {
+    margin-right: 10px;
+  }
+
+  @media screen and (min-width: ($desktop)) {
+    margin-right: 12px;
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 34px;
+
+  @media screen and (min-width: ($tablet)) {
+    margin-bottom: 30px;
+  }
+
+  color: $color-background;
+
+  &.library {
+    margin-bottom: 40px;
+
+    @media screen and (min-width: ($tablet)) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.header__title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: calc(35 / 30);
+  transition: color $timing-function;
+
+  &:hover,
+  &:focus {
+    fill: $color-current-underline;
+    color: $color-current-underline;
+    transition: color $timing-function;
+  }
+
+  @media screen and (max-width: ($tablet - 0.02px)) {
+    display: none;
+  }
+}
+
+.header__nav {
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.header__authentication {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+
+.header__nav-item {
+  @extend %list;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+  fill: $color-background;
+  transition: color $timing-function;
+  transition: fill $timing-function;
+
+  &:hover,
+  &:focus {
+    fill: $color-current-underline;
+    color: $color-current-underline;
+    transition: color $timing-function;
+    transition: fill $timing-function;
+  }
+}
+
+.header__auth-link,
+.header__nav-link {
+  position: relative;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $color-current-underline;
+
+    transition: color $timing-function;
+  }
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 20px;
+
+  @media screen and (min-width: ($tablet)) {
+    gap: 40px;
+  }
+
+  @media screen and (min-width: ($desktop)) {
+    gap: 50px;
+  }
+}
+
+.header__form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.header__input {
+  position: relative;
+  min-width: 280px;
+
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  color: $color-background;
+  background-color: transparent;
+
+  border: none;
+  outline: transparent;
+  border-bottom: 0.5px solid $color-background;
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    color: $color-background;
+  }
+
+  @media screen and (min-width: ($tablet)) {
+    min-width: 336px;
+  }
+
+  @media screen and (min-width: ($desktop)) {
+    min-width: 394px;
+  }
+}
+
+.header__input-wrapper {
+  position: relative;
+  display: inline-block;
+  &.hidden {
+    display: none;
+  }
+}
+
+.header__input-info {
+  position: absolute;
+  right: 0;
+  bottom: -55px;
+
+  @media screen and (min-width: ($tablet)) {
+    bottom: -45px;
+  }
+
+  @media screen and (min-width: ($desktop)) {
+    bottom: -35px;
+  }
+}
+
+.library-button {
+  display: flex;
+  gap: 20px;
+
+  @media screen and (min-width: ($tablet)) {
+    gap: 32px;
+  }
+
+  @media screen and (min-width: ($desktop)) {
+    gap: 16px;
+  }
+}
+
+.header__nav-item.current .header__nav-link::after,
+.header__authentication.current .header__auth-link::after {
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: $color-current-underline;
+}
+
+.header__input-info {
+  color: $color-current-underline;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  align-items: center;
+  padding-top: 16px;
+
+  @media screen and (min-width: ($tablet)) {
+    text-align: center;
+    padding-top: 20px;
+  }
+}
+
+.search__icon {
+  fill: currentColor;
+}
+
+.sign-in-modal {
+  position: absolute;
+  z-index: 100;
+  bottom: -390px;
+  right: 0;
+  width: 260px;
+  height: 400px;
+
+  padding: 10px;
+
+  color: $color-background;
+  background-image: url(../images/header/modal-sign-in-bg.png);
+  border: 1px solid $color-accent;
+  border-radius: 15px 0 15px 15px;
+  box-shadow: $shadow-modal-sign-in;
+  cursor: auto;
+}
+
+.sign-in__label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  color: $color-accent;
+}
+
+.sign-in__input {
+  background-color: transparent;
+}

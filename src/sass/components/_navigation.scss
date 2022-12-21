@@ -1,0 +1,7 @@
+.nav {
+  margin-left: auto;
+}
+
+.nav__list {
+  @extend %list;
+}

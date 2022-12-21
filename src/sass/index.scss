@@ -1,2 +1,25 @@
-@import './common';
-@import './example';
+// UTIL STYLES
+@import './utils/variables';
+@import './utils/animation';
+@import './utils/placeholders';
+@import './utils/visually-hidden';
+
+// BASE STYLES
+@import './base/common';
+@import './base/reset';
+@import './base/base';
+
+// COMPONENTS STYLES
+
+@import './components/container';
+@import './components/buttons';
+@import './components/navigation';
+@import './components/scroll-up';
+@import './components/pagination';
+
+// LAYOUTS STYLES
+@import './layouts/header';
+@import './layouts/gallery';
+@import './layouts/footer';
+@import './layouts/modal';
+@import './layouts/footer-modal';

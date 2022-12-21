@@ -1,0 +1,45 @@
+%link {
+  text-decoration: none;
+  color: currentColor;
+}
+
+%list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+%button {
+  display: block;
+  width: 130px;
+  height: 44px;
+  padding-top: 13px;
+  padding-bottom: 12px;
+  padding-right: 0;
+  padding-left: 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  text-transform: uppercase;
+  text-align: center;
+
+  color: $color-background;
+  background-color: transparent;
+
+  border: 1px solid $color-background;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  @media screen and (min-width: ($tablet)) {
+    width: 152px;
+  }
+  @media screen and (min-width: ($desktop)) {
+    width: 148px;
+  }
+
+  &.current {
+    background-color: $color-accent;
+    border: 1px solid $color-accent;
+  }
+}

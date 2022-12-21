@@ -1,0 +1,124 @@
+.basicLightbox {
+  position: fixed;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.team-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  width: 320px;
+  height: auto;
+  padding: 20px 10px;
+  margin: -20px;
+
+  background-color: $orange;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 70px;
+    width: 240px;
+
+    border-radius: 15px;
+  }
+
+  @media screen and (max-width: (768px - 1)) {
+    margin-top: 200%;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-top: 40%;
+    width: 600px;
+
+    border-radius: 25px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin: -30px;
+    width: 1280px;
+  }
+}
+
+.team__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.team-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-56%, -50%);
+  margin-bottom: 10px;
+  width: 105px;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid darkgray;
+}
+
+.image-bg {
+  position: relative;
+  background-image: url(../images/footer/modalfon.png);
+  height: 160px;
+  width: 160px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.team-title {
+  color: $color-primary-text;
+  text-align: center;
+  font-size: 26px;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-right: 5px;
+}
+
+.team-text {
+  color: $white;
+  font-size: 24px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+}
+
+.team-card {
+  display: flex;
+  position: relative;
+  list-style: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-name {
+  position: relative;
+  margin-bottom: 5px;
+  color: $color-primary-text;
+  font-weight: 700;
+}
+
+.team-role {
+  position: relative;
+}
+
+.basicLightbox__placeholder {
+  position: relative;
+  top: -40%;
+
+  @media screen and (min-width: 768px) {
+    top: -20%;
+  }
+
+  @media screen and (min-width: 1280px) {
+    top: 20%;
+  }
+}

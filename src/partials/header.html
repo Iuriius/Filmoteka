@@ -1,0 +1,46 @@
+<header class="header js-header">
+  <div class="header__container container js-container">
+    <div class="header__wrapper js-wrapper">
+      <div class="header__logo js-logo">
+        <img class="header__logo-icon" src="./images/header/logo.svg" width="24" height="24" alt="logo" />
+        <h1 class="header__title">Filmoteka</h1>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item js-home">
+            <p id="home" class="header__nav-link">Home</p>
+          </li>
+          <li class="header__nav-item js-library">
+            <p id="mylib" class="header__nav-link">My library</p>
+          </li>
+          <!-- Перемикач темної теми -->
+          <li id="sun" class="header__nav-item">
+            <svg class="header__nav-link" width="16" height="16">
+              <use href="./images/sprite.svg#sun"></use>
+            </svg>
+          </li>
+          <li id="moon" class="visually-hidden header__nav-item">
+            <svg class="header__nav-link" width="16" height="16">
+              <use href="./images/sprite.svg#moon"></use>
+            </svg>
+          </li>
+        </ul>
+      </nav>      
+    </div>
+    <form class="header__form">
+      <div class="header__input-wrapper js-input">
+        <input class="header__input" type="text" placeholder="Movie search" name="searchFilm" autocomplete="off" />
+        <p class="header__input-info" hidden>Search result not successful. Enter the correct movie name.</p>
+        <button class="search-button js-search" type="submit">
+          <svg class="search-button__icon" width="12" height="12">
+            <use class="search__icon" href="./images/sprite.svg#search"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="btncont" class="library-button">
+        <button class="watched-button js-watched hidden" type="button">Watched</button>
+        <button class="queue-button js-queue hidden" type="button">Queue</button>
+      </div>
+    </form>
+  </div>
+</header>
